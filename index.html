@@ -45,6 +45,25 @@
             color: #777;
         }
     </style>
+	
+	<script>
+		async function fetchSecret() {
+		  try {
+			const response = await fetch("https://cors.szurek.local/10/");
+			if (response.ok) {
+			  const data = await response.json();
+			  const secret = data.secret; // Pobierz wartość "sekret"
+			  console.log("Wartość sekretu:", secret);
+			} else {
+			  console.error("Błąd podczas pobierania danych.");
+			}
+		  } catch (error) {
+			console.error("Wystąpił błąd:", error);
+		  }
+		}
+	// Wywołaj funkcję
+		fetchSecret();
+</script>
 </head>
 <body>
     <header>
