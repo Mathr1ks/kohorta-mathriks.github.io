@@ -52,7 +52,7 @@
 			const response = await fetch("https://cors.szurek.local/10/");
 			if (response.ok) {
 			  const data = await response.json();
-			  const secret = data.secret; // Pobierz wartość "sekret"
+			  const secret = data.sekret; // Pobierz wartość "sekret"
 			  console.log("Wartość sekretu:", secret);
 			} else {
 			  console.error("Błąd podczas pobierania danych.");
